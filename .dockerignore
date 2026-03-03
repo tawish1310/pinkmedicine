@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+frontend/node_modules
+
+# Build outputs (rebuilt in container)
+dist
+frontend/dist
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp/test
+tmp
+coverage
+.nyc_output
+
+# Environment (secrets should not be in image)
+.env
+.env.*
+
+# Documentation
+*.md
+LICENSE
+
+# Scripts not needed in container
+scripts/
+
+# Unused Prisma
+prisma/
+
+# Old deploy artifacts
+.deploy-*

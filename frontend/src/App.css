@@ -1,0 +1,19 @@
+/* App.css - Additional styling for App component */
+
+.app {
+  background-color: var(--pm-bg-subtle);
+  min-height: 100vh;
+  font-family: var(--pm-font);
+}
+
+.app-container {
+  background-color: var(--pm-bg-subtle);
+}
+
+.app-footer {
+  background-color: var(--pm-text);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: var(--pm-font);
+}

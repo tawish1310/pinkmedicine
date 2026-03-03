@@ -1,0 +1,47 @@
+{
+  "name": "medication-research-api",
+  "version": "1.0.0",
+  "description": "REST API for women's medication research data from ClinicalTrials.gov and OpenFDA FAERS",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "npm run dev:backend",
+    "dev:backend": "ts-node src/server.ts",
+    "dev:frontend": "vite --config frontend/vite.config.ts",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "tsc",
+    "build:frontend": "vite build --config frontend/vite.config.ts",
+    "preview:frontend": "vite preview --config frontend/vite.config.ts",
+    "deploy:azure": "pwsh -ExecutionPolicy Bypass -File ./scripts/deploy-azure.ps1",
+    "start": "node dist/server.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "medication",
+    "research",
+    "women",
+    "API",
+    "healthcare"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "dotenv": "^17.3.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/node": "^20.19.35",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vite": "^7.3.1"
+  }
+}

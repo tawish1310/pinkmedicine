@@ -1,0 +1,108 @@
+.medication-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.medication-card {
+  background: var(--pm-bg);
+  border: 1px solid var(--pm-border);
+  border-radius: var(--pm-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.medication-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--pm-primary);
+}
+
+.medication-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--pm-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.medication-name {
+  flex: 1;
+  font-family: var(--pm-font);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--pm-text);
+  margin: 0;
+}
+
+.fda-badge {
+  background-color: var(--pm-success);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--pm-font);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.medication-body {
+  padding: 1rem;
+  flex: 1;
+}
+
+.medication-generic,
+.medication-property {
+  margin: 0.5rem 0;
+  font-family: var(--pm-font);
+  font-size: 0.875rem;
+  color: var(--pm-text-secondary);
+}
+
+.medication-generic strong,
+.medication-property strong {
+  color: var(--pm-text);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.medication-footer {
+  padding: 0 1rem 1rem 1rem;
+  margin-top: auto;
+}
+
+.view-details-btn {
+  display: inline-block;
+  background-color: var(--pm-primary);
+  color: #ffffff;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--pm-radius);
+  text-decoration: none;
+  font-family: var(--pm-font);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  border: none;
+}
+
+.view-details-btn:hover {
+  background-color: var(--pm-primary-hover);
+}
+
+.medication-list-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: var(--pm-font);
+  color: var(--pm-text-secondary);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .medication-list {
+    grid-template-columns: 1fr;
+  }
+}
