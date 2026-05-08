@@ -281,7 +281,7 @@ if ([string]::IsNullOrWhiteSpace($deploymentToken)) {
 }
 
 $frontendDeployedToSwa = $true
-swa deploy ./dist --deployment-token $deploymentToken --env production
+swa deploy ./dist/frontend --deployment-token $deploymentToken --env production
 if ($LASTEXITCODE -ne 0) {
   $frontendDeployedToSwa = $false
   Write-Host "Warning: Static Web Apps deploy failed. Falling back to hosting frontend from App Service." -ForegroundColor Yellow
